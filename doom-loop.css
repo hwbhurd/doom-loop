@@ -115,6 +115,44 @@ body {
   transform: translateY(-5px);
 }
 
+#loading {
+  background: white;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+
+#loading h1 {
+  background: none;
+  color: #222;
+  padding: 0;
+  position: relative;
+}
+
+#loading h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  height: 8px;
+  background: #ff3680;
+  animation: wipe 1.5s forwards ease-out;
+}
+
+@keyframes wipe {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .doom {
   height: 100vh;
   width: 100vw;

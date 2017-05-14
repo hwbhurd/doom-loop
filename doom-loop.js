@@ -5,16 +5,18 @@ window.onload = function() {
   r = 3;
   tories = {};
   image = $('.image');
-   var src = 'images/' + name + '.png';
-   image.attr('src', src);
-  tories.name = 'may';
 
+  tories.name = 'may';
   setTimeout(showButton, 5000);
   setTimeout(showTitle, 12000);
   setTimeout(resetPolitics, 14000);
   var theInterval = setInterval(createLoop, 1500);
 
 
+  image.on('load', function() {
+    $('#loading').fadeOut();
+
+  })
 
 }
 
