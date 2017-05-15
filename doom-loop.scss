@@ -36,6 +36,7 @@
     font-family: 'FoundersRegular';
     font-size: 10vw;
     cursor: help;
+    width: 100%;
     span {
       position: relative;
       transition: all 0.3s ease-out;
@@ -45,20 +46,27 @@
         left: 0;
         opacity: 0;
         max-height: 0px;
-        padding: 40px 20px;
+        padding: 20px 20px;
         overflow: hidden;
         background: white;
         color: #222;
         width: 100%;
         transition: all 0.3s ease-out;
         border-top: 8px solid #55f0b8;
-        font-size: 20px;
+        font-size: 16px;
         font-family: 'FoundersRegular';
+        @media (min-width: 768px) {
+           font-size: 20px;
+           padding: 40px 20px;
+         }
         a {
           display: block;
           color: #ff3680;
           margin-top: 15px;
-          font-size: 24px;
+          font-size: 20px;
+          @media (min-width: 768px) {
+             font-size: 24px;
+           }
         }
       }
     }
@@ -113,12 +121,15 @@ body {
   display: block;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -30%;
   right: 0;
   margin: auto;
   transform: scale(1);
   display: none;
   animation: manualLoop 5s forwards linear;
+  @media (min-width: 768px) {
+     left: 0;
+   }
 
 }
 
